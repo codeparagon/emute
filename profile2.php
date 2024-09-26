@@ -16,7 +16,7 @@ include './header.php';
             <div class="d-flex" style="gap:10px;">
                 <button class="subscribe-btn">ORDER</button>
                 <button class="subscribe-btn">DASHBOARD</button>
-                <button class="subscribe-btn">SETTING</button>
+                <button class="subscribe-btn" onclick="openPopup('setting')">SETTING</button>
             </div>
         </div>
         <div class="profile-info">
