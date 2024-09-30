@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./assets/css/singleProduct.css" />
     <link rel="stylesheet" href="./assets/css/checkout.css" />
     <link rel="stylesheet" href="./assets/css/profile.css" />
+    <link rel="stylesheet" href="./assets/css/myprofile.css" />
 
     <link rel="stylesheet" href="./assets/css/orderDetail.css" />
 
@@ -192,7 +193,7 @@
         <div class="cart-items">
             <!-- Example Product 1 -->
             <div class="cart-item">
-                <img src="path/to/product-image.jpg" alt="Product Image">
+                <img src="" alt="Product Image">
                 <div class="product-details">
                     <h4>leena for Mac Duggal</h4>
                     <div class="pricing">
@@ -303,18 +304,18 @@
                 <a href="#">Need help?</a>
             </div>
             <div class="sub-container">
-                <label for="zip">Delivery ZIP Code</label>
-                <input type="text" id="zip" name="zip" placeholder="Enter ZIP Code">
+                <label for="zip2">Delivery ZIP Code</label>
+                <input type="text" id="zip2" name="zip" placeholder="Enter ZIP Code">
 
-                <label for="size">Size</label>
-                <select id="size" name="size">
+                <label for="size2">Size</label>
+                <select id="size2" name="size">
                     <option value="IT44">IT 44 / US 8</option>
                     <option value="IT46">IT 46 / US 9</option>
                     <option value="IT48">IT 48 / US 10</option>
                 </select>
 
-                <label for="size">Fre Backup Size</label>
-                <select id="size" name="size">
+                <label for="fbsize">Free Backup Size</label>
+                <select id="fbsize" name="fbsize">
                     <option value="IT44">IT 44 / US 8</option>
                     <option value="IT46">IT 46 / US 9</option>
                     <option value="IT48">IT 48 / US 10</option>
@@ -359,8 +360,8 @@
             </div>
             <div class="sub-container">
                 <form action="">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Name">
+                    <label for="name2">Name</label>
+                    <input type="text" id="name2" name="name" placeholder="Name">
 
                     <label for="file">Photo</label>
                     <div class="file-upload-container">
@@ -375,8 +376,8 @@
                     <label for="price">Price</label>
                     <input type="number" id="price" name="price" placeholder="Name">
 
-                    <label for="size">Fre Backup Size</label>
-                    <select id="size" name="size">
+                    <label for="size3">Fre Backup Size</label>
+                    <select id="size3" name="size">
                         <option value="IT44">IT 44 / US 8</option>
                         <option value="IT46">IT 46 / US 9</option>
                         <option value="IT48">IT 48 / US 10</option>
@@ -469,12 +470,12 @@
                             <p>Drop file to upload or Click to browse</p>
                             <button class="import-btn second">Import</button>
                         </span>
-                        <input type="file" id="file-input" class="file-input second" multiple />
+                        <input type="file" id="file-input2" class="file-input second" multiple />
                     </div>
                     <div id="file-list second"></div>
 
-                    <label for="size">Link Sell Item</label>
-                    <select id="size" name="size">
+                    <label for="size4">Link Sell Item</label>
+                    <select id="size4" name="size">
                         <option value="IT44">IT 44 / US 8</option>
                         <option value="IT46">IT 46 / US 9</option>
                         <option value="IT48">IT 48 / US 10</option>
@@ -484,45 +485,45 @@
                 </form>
 
                 <script>
-                    const fileInput = document.querySelector('.file-input.second');
-                    const fileUploadContainer = document.querySelector('.file-upload-container.second');
-                    const importBtn = document.querySelector('.import-btn.second');
-                    const fileList = document.querySelector('.file-list.second');
+                    const fileInput2 = document.querySelector('.file-input.second');
+                    const fileUploadContainer2 = document.querySelector('.file-upload-container.second');
+                    const importBtn2 = document.querySelector('.import-btn.second');
+                    const fileList2 = document.querySelector('.file-list.second');
 
                     // Handle drag and drop events
-                    fileUploadContainer.addEventListener('dragover', (event) => {
+                    fileUploadContainer2.addEventListener('dragover', (event) => {
                         event.preventDefault();
-                        fileUploadContainer.classList.add('dragging');
+                        fileUploadContainer2.classList.add('dragging');
                     });
 
-                    fileUploadContainer.addEventListener('dragleave', () => {
-                        fileUploadContainer.classList.remove('dragging');
+                    fileUploadContainer2.addEventListener('dragleave', () => {
+                        fileUploadContainer2.classList.remove('dragging');
                     });
 
-                    fileUploadContainer.addEventListener('drop', (event) => {
+                    fileUploadContainer2.addEventListener('drop', (event) => {
                         event.preventDefault();
-                        fileUploadContainer.classList.remove('dragging');
-                        handleFiles(event.dataTransfer.files);
+                        fileUploadContainer2.classList.remove('dragging');
+                        handleFiles2(event.dataTransfer.files);
                     });
 
                     // Handle click to browse
-                    fileUploadContainer.addEventListener('click', () => {
-                        fileInput.click();
+                    fileUploadContainer2.addEventListener('click', () => {
+                        fileInput2.click();
                     });
 
                      // Handle click to browse
-                     importBtn.addEventListener('click', (e) => {
+                     importBtn2.addEventListener('click', (e) => {
                         e.preventDefault();
                     });
 
                     // Handle file selection
-                    fileInput.addEventListener('change', () => {
-                        handleFiles(fileInput.files);
+                    fileInput2.addEventListener('change', () => {
+                        handleFiles2(fileInput.files);
                     });
 
                     // Function to handle files and display them
-                    function handleFiles(files) {
-                        fileList.innerHTML = '';  // Clear the list before adding new files
+                    function handleFiles2(files) {
+                        fileList2.innerHTML = '';  // Clear the list before adding new files
                         Array.from(files).forEach(file => {
                             const fileItem = document.createElement('div');
                             fileItem.classList.add('file-item');
@@ -536,7 +537,7 @@
                             fileItem.appendChild(fileName);
                             fileItem.appendChild(fileSize);
 
-                            fileList.appendChild(fileItem);
+                            fileList2.appendChild(fileItem);
                         });
                     }
 
