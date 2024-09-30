@@ -1,7 +1,7 @@
 *{
     margin:0;
   }
-  .container {
+.mp-container {
     height: 100vh;
     width: 100%;
     /* background-color: azure; */
@@ -110,7 +110,7 @@
   
   .my-box-card .content {
     width: calc(100% - 310px); /* Adjust width to accommodate the tab list */
-    /* padding-left: 10px;  */
+    padding-right: 10px; 
     padding-top: 4rem;
   }
   
